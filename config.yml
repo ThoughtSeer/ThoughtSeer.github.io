@@ -1,4 +1,25 @@
-baseURL: http://example.org/
+baseURL: https://thoughtseer.github.io/
 languageCode: en-us
-title: My New Hugo Site
+title: ThoughtSeer's CTF Blog
 theme: "PaperMod"
+
+params:
+    profileMode:
+        enabled: true
+        title: "ThoughtSeer"
+        subtitle: "A CTF Blog"
+        imageUrl: {{ $local := resources.Get "ts.png" }} # optional
+        imageTitle: "ThoughtSeer Logo" # optional
+        imageWidth: 120 # custom size
+        imageHeight: 120 # custom size
+        buttons:
+            - name: Archive
+              url: "/archive"
+            - name: Github
+              url: "https://github.com/thoughtseer"
+
+    socialIcons: # optional
+        - name: "Twitter"
+          url: "<link>"
+        - name: "Twitch"
+          url: "<link2>"
