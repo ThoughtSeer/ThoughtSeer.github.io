@@ -15,6 +15,8 @@ params:
         buttons:
             - name: Archive
               url: "/archive"
+            - name: Search
+              url: "/content/search"
             - name: Github
               url: "https://github.com/thoughtseer"
 
@@ -23,3 +25,17 @@ params:
           url: "<link>"
         - name: "Twitch"
           url: "<link2>"
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
